@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Global Functions</title>
+</head>
+<body>
+  <p>Example 1</p>
+  {{range .}}
+  {{.}}
+  {{end}}
+
+  <p>Example 2</p>
+  {{if .}}
+  EXAMPLE #2 - {{.}}
+  {{end}}
+
+  <p>Example 3</p>
+  {{range .}}
+    {{if .Name}}
+      EXAMPLE #3 - {{.Name}}
+    {{end}}
+  {{end}}
+
+  <p>Example 4</p>
+  {{range .}}
+    {{if and .Name .Admin}}
+      EXAMPLE #4 - Name: {{.Name}}
+      EXAMPLE #4 - Motto: {{.Motto}}
+      EXAMPLE #4 - Admin: {{.Admin}}
+    {{end}}
+  {{end}}
+</body>
+</html>

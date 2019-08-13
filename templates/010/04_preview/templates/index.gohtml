@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Header Menu</title>
+  <link rel="stylesheet" href="public/main.css">
+</head>
+<body>
+  {{template "svgs"}}
+
+  {{template "header"}}
+
+  <div id="atf">
+    <main>
+      <svg class="icon icon-big-in">
+        <use xlink:hreff="#inbox"></use>
+      </svg>
+      <h1>Are You In?</h1>
+    </main>
+  </div>
+
+  {{template "btf"}}
+
+  {{template "footer"}}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Templates</title>
+</head>
+<body>
+  {{template "svgs"}}
+
+  {{template "header"}}
+
+  <div class="atf">
+    <main>
+      <svg class="icon icon-big-in">
+        <use xlink:href="#inbox"></use>
+      </svg>
+      <h1>Are You In?</h1>
+    </main>
+  </div>
+
+  {{template "btf"}}
+
+</body>
+</html>

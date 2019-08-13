@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"io"
+	"log"
+	"os"
+	"strings"
+)
 
 func main() {
-	name := "Spike Burton"
+	name := os.Args[1]
 
 	tpl := `
 	<!DOCTYPE html>
@@ -20,5 +25,11 @@ func main() {
 	</html>
 	`
 
-	fmt.Println(tpl)
+	nf, err := os.Create("index.html")
+	if err != nil {
+		log.Fatal("error creating file")
+	}
+	defer nf.Close()
+
+	io.Copy(nf, strings.NewReader(tpl))
 }
