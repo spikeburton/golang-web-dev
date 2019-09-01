@@ -9,5 +9,14 @@
 <body>
   <p><strong>METHOD:</strong> {{.Method}}</p>
   <p><strong>URI:</strong> {{.URI}}</p>
+  <h1>Links</h1>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  {{if eq .URI "/about"}}
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus animi aliquam, eligendi laborum blanditiis facere obcaecati, dicta perferendis aperiam expedita maiores corrupti odio, unde error doloremque porro! Voluptatum, error odit.</p>
+  {{end}}
 </body>
 </html>

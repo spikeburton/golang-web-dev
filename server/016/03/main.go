@@ -83,21 +83,21 @@ func response(conn net.Conn, m string, u string) {
 
 	switch m {
 	case "GET":
-		if u != "/" {
-			body = `
-			<!DOCTYPE html>
-			<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<meta http-equiv="X-UA-Compatible" content="ie=edge">
-				<title>Document</title>
-			</head>
-			<body>
-				404 NOT FOUND
-			</body>
-			</html>`
-		}
+		// if u != "/" {
+		// 	body = `
+		// 	<!DOCTYPE html>
+		// 	<html lang="en">
+		// 	<head>
+		// 		<meta charset="UTF-8">
+		// 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		// 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		// 		<title>Document</title>
+		// 	</head>
+		// 	<body>
+		// 		404 NOT FOUND
+		// 	</body>
+		// 	</html>`
+		// }
 
 		fmt.Fprintf(conn, "HTTP/1.1 200 OK\r\n")
 		fmt.Fprintf(conn, "Content-Length: %d\r\n", len(body))
