@@ -1,0 +1,15 @@
+{{template "header"}}
+
+<form method="POST" enctype="multipart/form-data">
+  <label for="idx-f">Choose File</label>
+  <input type="file" name="q" id="idx-f">
+  <br>
+  <input type="submit">
+</form>
+
+{{if .}}
+<h1>Here are the contents of the file:</h1>
+<p>{{.}}</p>
+{{end}}
+
+{{template "footer"}}

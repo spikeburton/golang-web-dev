@@ -1,0 +1,21 @@
+add(vec) {
+  let that = this;
+  let output = false;
+  let vX = null;
+  let vY = null;
+  try {
+    if(vec.constructor.name === `Vector`) {
+      vX = vec.x;
+	  vY = vec.y;
+    } else if(vec.constructor.name === `Array` && (vec.length % 2) === 0) {
+	  /* This type check could look for an array of nested vectors */
+      vX = vec[0];
+	  vY = vec[1];
+    }  
+    output = (vX && vY) ? new Vector(that._x + vX, that._y + vY) : output;
+  } catch (e) {
+    alert(`ERROR: ${e}`);
+  } finally {
+    return output;
+  }
+}
