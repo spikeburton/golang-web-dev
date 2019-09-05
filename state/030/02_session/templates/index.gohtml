@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+</head>
+<body>
+  <form method="post">
+    <input type="text" name="username" placeholder="email">
+    <input type="text" name="firstname" placeholder="first name">
+    <input type="text" name="lastname" placeholder="last name">
+    <input type="submit">
+  </form>
+
+  {{if .First}}
+  <p>USER NAME {{.UserName}}</p>
+  <p>FIRST {{.First}}</p>
+  <p>LAST {{.Last}}</p>
+  {{end}}
+
+  <br>
+  <h2>Go to <a href="/bar">the bar</a></h2>
+</body>
+</html>
