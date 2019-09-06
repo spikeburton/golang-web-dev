@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  {{if .UserName}}
+  <p>USER NAME {{.UserName}}</p>
+  <p>PASSWORD {{.Password}}</p>
+  <p>FIRST {{.First}}</p>
+  <p>LAST {{.Last}}</p>
+  {{else}}
+  <h2><a href="/signup">sign up</a></h2>
+  <h2><a href="/login">login</a></h2>
+  {{end}}
+
+  <br>
+  <h2>Go to <a href="/bar">the bar</a></h2>
+</body>
+</html>
